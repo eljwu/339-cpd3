@@ -182,3 +182,44 @@ footer a:hover {
         box-shadow: none;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+    nav {
+        background-color: black;
+    }
+    nav ul li a {
+        color: white;
+    }
+    header {
+        background-color: black;
+    }
+    table {
+        background-color: black;
+    }
+    td {
+        border-bottom: 1px solid #444;
+    }    
+    tr:hover {
+        background-color: #333;
+    }
+    tr:nth-child(even) {
+        background-color: #242424;
+    }    
+    p .athlete{
+        background-color: black;
+    }
+    .athlete {
+        background-color: #333;
+    }
+    .athlete dt {
+        color: white;
+    }
+    footer {
+        background-color: black;
+        color: white;
+    }
+}
