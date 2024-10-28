@@ -1,3 +1,8 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(0.6rem, 1.6vw, 1.6rem);
+}
+
 nav {
     width: 100%;
     padding: 20px;
@@ -9,7 +14,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 0px;
 }
 
 nav ul li a {
@@ -41,6 +46,9 @@ table {
     border-collapse: collapse;
     border: 1px solid;
     width: 90%;
+    height: 90%;
+    overflow-x: scroll;
+    overflow-y: auto;
 }
 
 td {
@@ -64,6 +72,15 @@ tr:nth-child(even) {
 
 
 
+
+@keyframes color-change {
+    0%   {background-color:white;}
+    25%  {background-color:#bdcdd6;}
+    50%  {background-color:#a6c6da;}
+    75%  {background-color:#91bcd7}
+    100% {background-color:#84b4d2}
+}
+
 p .athlete{
     padding: 0px;
     margin: 0px;
@@ -80,6 +97,8 @@ p .athlete{
     padding: 12px;
     min-width: 180px;
     border-radius: 10px;
+    animation-name: color-change;
+    animation-duration: 4s;
 }
 
 .athlete img {
@@ -110,19 +129,6 @@ p .athlete{
     margin-left: 10px;
     grid-column: 2;
 }
-
-/* @media (max-width: 768px) {
-    .athlete dl {
-      grid-template-columns: 1fr; 
-      grid-template-rows: none;
-      row-gap: 5px;
-    }
-  
-    .athlete dt, .athlete dd {
-      text-align: center;
-      grid-column: 1; 
-    }
-} */
 
 
 
@@ -167,25 +173,12 @@ footer a:hover {
 
 
 
-/* responsive media queries */
-/* @media (max-width: 768px) {
-    header h1 {
-      font-size: 2rem;
+@media (prefers-reduced-motion) {
+    html {
+        scroll-behavior: smooth;
     }
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-    }
-    nav ul li a {
-      padding: 10px 0;
+    #gallery img:hover {
+        transform: none;
+        box-shadow: none;
     }
 }
-
-@media (min-width: 1024px) {
-    main {
-      padding: 40px;
-    }
-    .athlete {
-      justify-content: space-between;
-    }
-} */
