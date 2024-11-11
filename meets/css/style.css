@@ -130,7 +130,6 @@ p .athlete{
     border-radius: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    display: none;
 }
 #gallery img:hover {
     transform: scale(1.05);
